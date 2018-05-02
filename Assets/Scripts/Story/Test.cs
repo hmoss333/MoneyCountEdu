@@ -4,74 +4,74 @@ using System.Collections;
 
 public class Test : MonoBehaviour
 {
-	[Header("Variables")]
-	private bool enabled = true;
-	//public bool isOn = false; // Clicking will toggle the button on and off. Starts off
-	private int count = -1;
-	string message;
-	private bool completetext = true;
-	//bool animateBook = false;
-	//bool animateChest = false;
-	//private bool didSeeKeyPress = false;
-	private bool objectApp = false;
-	private bool key3Press = false;
-	private bool key2Press = false;
-	private bool key1Press = false;
-	private bool keyspacePress = false;
-	private bool keyenterPress = false;
-	private bool repeat = false;
-	private bool back = false;
-	private bool backPage = false;
-	private bool repeatPage = false;
-	private bool nextPage = false;
-	private bool load = false;
-	float startAlpha;
-	int sequence;
-	//bool isAnimationEffect = true;
-	int randMusic;
-	Event e;
+    [Header("Variables")]
+    private bool enabled = true;
+    //public bool isOn = false; // Clicking will toggle the button on and off. Starts off
+    private int count = -1;
+    string message;
+    private bool completetext = true;
+    //bool animateBook = false;
+    //bool animateChest = false;
+    //private bool didSeeKeyPress = false;
+    private bool objectApp = false;
+    private bool key3Press = false;
+    private bool key2Press = false;
+    private bool key1Press = false;
+    private bool keyspacePress = false;
+    private bool keyenterPress = false;
+    private bool repeat = false;
+    private bool back = false;
+    private bool backPage = false;
+    private bool repeatPage = false;
+    private bool nextPage = false;
+    private bool load = false;
+    float startAlpha;
+    int sequence;
+    //bool isAnimationEffect = true;
+    int randMusic;
+    Event e;
 
-	[Header("Menu Objects")]
-	public GameObject storyParent;
-	public UIPanel storyView;
-	public Camera mainCamera;
-	public UITexture sprite;
-	public UISprite otherBackground;
-	public UILabel label;
-	public UISprite next;
-	public UILabel play;
-	public UISprite cover;
+    [Header("Menu Objects")]
+    public GameObject storyParent;
+    public UIPanel storyView;
+    public Camera mainCamera;
+    public UITexture sprite;
+    public UISprite otherBackground;
+    public UILabel label;
+    public UISprite next;
+    public UILabel play;
+    public UISprite cover;
 
-	public UISprite exitBack;
-	public UISprite playBack2;
-	public UILabel exitLabel;
-	public UISprite repeatBack;
-	public UISprite repeatBack2;
-	public UILabel repeatLabel;
-	public UISprite backBack;
-	public UISprite backBack2;
-	public UILabel backLabel;
+    public UISprite exitBack;
+    public UISprite playBack2;
+    public UILabel exitLabel;
+    public UISprite repeatBack;
+    public UISprite repeatBack2;
+    public UILabel repeatLabel;
+    public UISprite backBack;
+    public UISprite backBack2;
+    public UILabel backLabel;
 
     [Header("Effects")]
-	public UISprite testobj;
-	public GameObject specialAnimationEffect1;
-	public GameObject specialAnimationEffect2;
-	public GameObject specialAnimationEffect3;
-	public GameObject specialAnimationEffect4;
-	public GameObject specialAnimationEffect5;
-	public GameObject specialAnimationEffect6;
-	public GameObject specialAnimationEffect7;
-	public GameObject specialAnimationEffect8;
-	public GameObject specialAnimationEffect9;
-	public GameObject specialAnimationEffect10;
-	public GameObject specialAnimationEffect11;
-	public GameObject specialAnimationEffect12;
-	public GameObject specialAnimationEffect13;
-	public GameObject specialAnimationEffect14;
-	public GameObject specialAnimationEffect15;
-	public GameObject specialAnimationEffect16;
-	public GameObject specialAnimationEffect17;
-	public GameObject specialAnimationEffect18;
+    public UISprite testobj;
+    public GameObject specialAnimationEffect1;
+    public GameObject specialAnimationEffect2;
+    public GameObject specialAnimationEffect3;
+    public GameObject specialAnimationEffect4;
+    public GameObject specialAnimationEffect5;
+    public GameObject specialAnimationEffect6;
+    public GameObject specialAnimationEffect7;
+    public GameObject specialAnimationEffect8;
+    public GameObject specialAnimationEffect9;
+    public GameObject specialAnimationEffect10;
+    public GameObject specialAnimationEffect11;
+    public GameObject specialAnimationEffect12;
+    public GameObject specialAnimationEffect13;
+    public GameObject specialAnimationEffect14;
+    public GameObject specialAnimationEffect15;
+    public GameObject specialAnimationEffect16;
+    public GameObject specialAnimationEffect17;
+    public GameObject specialAnimationEffect18;
 
     [Header("Story Audio")]
     public AudioClip part1;
@@ -112,43 +112,43 @@ public class Test : MonoBehaviour
     public AudioClip part36;
 
     [Header("Audio")]
-	public AudioClip soundSpecial1;
-	public AudioClip soundSpecial2;
-	public AudioClip soundSpecial3;
-	public AudioClip soundSpecial4;
-	public AudioClip soundSpecial5;
-	public AudioClip soundSpecial6;
-	public AudioClip soundSpecial7;
-	public AudioClip soundSpecial8;
-	public AudioClip soundSpecial9;
-	public AudioClip soundSpecial10;
-	public AudioClip soundSpecial11;
-	public AudioClip soundSpecial12;
-	public AudioClip soundSpecial13;
-	public AudioClip soundSpecial14;
-	public AudioClip soundSpecial15;
-	public AudioClip soundSpecial16;
-	public AudioClip soundSpecial17;
-	public AudioClip soundSpecial18;
-	public AudioSource audiosource;
-	public AudioSource specialAudiosource;
+    public AudioClip soundSpecial1;
+    public AudioClip soundSpecial2;
+    public AudioClip soundSpecial3;
+    public AudioClip soundSpecial4;
+    public AudioClip soundSpecial5;
+    public AudioClip soundSpecial6;
+    public AudioClip soundSpecial7;
+    public AudioClip soundSpecial8;
+    public AudioClip soundSpecial9;
+    public AudioClip soundSpecial10;
+    public AudioClip soundSpecial11;
+    public AudioClip soundSpecial12;
+    public AudioClip soundSpecial13;
+    public AudioClip soundSpecial14;
+    public AudioClip soundSpecial15;
+    public AudioClip soundSpecial16;
+    public AudioClip soundSpecial17;
+    public AudioClip soundSpecial18;
+    public AudioSource audiosource;
+    public AudioSource specialAudiosource;
 
-	[Header("MiniGame Stuff")]
-	private bool inMiniGameMode;
-	private bool playedGame1;
-	private bool playedGame2;
-	private bool playedGame3;
-	//private bool playedGame4;
+    [Header("MiniGame Stuff")]
+    private bool inMiniGameMode;
+    private bool playedGame1;
+    private bool playedGame2;
+    private bool playedGame3;
+    //private bool playedGame4;
 
-	[Header("Tutorial")]
-	public GameObject Tutorial_1;
-	public GameObject Tutorial_2;
-	public GameObject Tutorial_3;
-	public bool inTutorialMode;
+    [Header("Tutorial")]
+    public GameObject Tutorial_1;
+    public GameObject Tutorial_2;
+    public GameObject Tutorial_3;
+    public bool inTutorialMode;
 
-	[Header("GUI")]
-	public UIFont font;
-	public UIAtlas atlas;
+    [Header("GUI")]
+    public UIFont font;
+    public UIAtlas atlas;
 
     //[Header("Loading Screen")]
     //LoadingScreen ls;
@@ -206,73 +206,73 @@ public class Test : MonoBehaviour
 #endif
 
     public void setTap()
-	{
-		completetext = true;
-		audiosource.Stop();
-	}
+    {
+        completetext = true;
+        audiosource.Stop();
+    }
 
-	public void exitClick()
-	{
+    public void exitClick()
+    {
         //SceneManager.LoadSceneAsync("LoadingScreen");
         StartCoroutine(DisplayScene());
-	}
+    }
 
-	public void repeatClick()
-	{
-		count--;
-		OnClick();
-	}
+    public void repeatClick()
+    {
+        count--;
+        OnClick();
+    }
 
-	public void backClick()
-	{
-		back = true;
-		if (count == 0)
-		{
-			back = false;
-		}
-		else
-		{
-			count -= 2;
-			OnClick();
-		}
-	}
+    public void backClick()
+    {
+        back = true;
+        if (count == 0)
+        {
+            back = false;
+        }
+        else
+        {
+            count -= 2;
+            OnClick();
+        }
+    }
 
-	public void tapStory()
-	{
-		if (!inMiniGameMode)
-		{
-			if (inTutorialMode)
-			{
-				if (Tutorial_1.activeInHierarchy)
-					Turotiral1OnClick();
-				else if (Tutorial_2.activeInHierarchy)
-					Turotiral2OnClick();
-				else if (Tutorial_3.activeInHierarchy)
-					Turotiral3OnClick();
-			}
+    public void tapStory()
+    {
+        if (!inMiniGameMode)
+        {
+            if (inTutorialMode)
+            {
+                if (Tutorial_1.activeInHierarchy)
+                    Turotiral1OnClick();
+                else if (Tutorial_2.activeInHierarchy)
+                    Turotiral2OnClick();
+                else if (Tutorial_3.activeInHierarchy)
+                    Turotiral3OnClick();
+            }
 
-			//if (isAnimationEffect)
-			else
-			{
-				playSpecialAnimationEffect();
-				playSpecialAudioEffect();
-			}
-			//isAnimationEffect = !isAnimationEffect;//Toggle effects;
-		}
-	}
+            //if (isAnimationEffect)
+            else
+            {
+                playSpecialAnimationEffect();
+                playSpecialAudioEffect();
+            }
+            //isAnimationEffect = !isAnimationEffect;//Toggle effects;
+        }
+    }
 
-	void Start()
-	{
+    void Start()
+    {
         //ls = GameObject.Find("LoadingScreen").GetComponent<LoadingScreen>();
         inMiniGameMode = false;
-		playedGame1 = false;
-		playedGame2 = false;
-		playedGame3 = false;
+        playedGame1 = false;
+        playedGame2 = false;
+        playedGame3 = false;
 
         e = Event.current;
 
         startAlpha = sprite.alpha;
-		sequence = 0;
+        sequence = 0;
 
 
         //This is needed to activate the iCade plugin. Deactivate it by using iCadeInput.Activate(false)
@@ -289,33 +289,33 @@ public class Test : MonoBehaviour
         //label.fontSize = (int)(34*PlayerPrefs.GetFloat("printSize")) + 34;
         label.fontSize = (int)(27 * PlayerPrefs.GetFloat("printSize")) + 27;
 
-		//if (repeat == false)
-		//{
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect1,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect2,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect3,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect4,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect5,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect6,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect7,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect8,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect9,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect10,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect11,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect12,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect13,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect14,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect15,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect16,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect17,1);
-		//	CFX_SpawnSystem.PreloadObject (specialAnimationEffect18,1);
+        //if (repeat == false)
+        //{
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect1,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect2,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect3,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect4,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect5,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect6,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect7,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect8,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect9,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect10,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect11,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect12,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect13,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect14,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect15,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect16,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect17,1);
+        //	CFX_SpawnSystem.PreloadObject (specialAnimationEffect18,1);
 
-		//	repeat = true;
-		//}
+        //	repeat = true;
+        //}
 
 
-		if (PlayerPrefs.GetInt("voice") == 1)
-		{
+        if (PlayerPrefs.GetInt("voice") == 1)
+        {
             part1 = null;
             part2 = null;
             part3 = null;
@@ -354,55 +354,55 @@ public class Test : MonoBehaviour
             part36 = null;
         }
 
-		OnClick();
+        OnClick();
 
-		//If tutorial is finished, don't start; otherwise start normally
-		if (PlayerPrefs.GetInt("tutorial") != 0) { inTutorialMode = false; } else { inTutorialMode = true; }
+        //If tutorial is finished, don't start; otherwise start normally
+        if (PlayerPrefs.GetInt("tutorial") != 0) { inTutorialMode = false; } else { inTutorialMode = true; }
 
-		if (PlayerPrefs.GetInt("tutorial") == 0)
-			Tutorial_1.SetActive(true);
-		else
-			Tutorial_1.SetActive(false);
+        if (PlayerPrefs.GetInt("tutorial") == 0)
+            Tutorial_1.SetActive(true);
+        else
+            Tutorial_1.SetActive(false);
 
-		Tutorial_2.SetActive(false);
-		Tutorial_3.SetActive(false);
+        Tutorial_2.SetActive(false);
+        Tutorial_3.SetActive(false);
 
-	}
+    }
 
-	void Update()
-	{
-		if (!inMiniGameMode) //prevents any input from being read if in minigame mode
-		{
-			if (Input.GetKeyDown("1") == true)
-			{
-				key1Press = true;
-				objectApp = true;
-			}
-			if (Input.GetKeyDown("2") == true)
-			{
-				key2Press = true;
-				objectApp = true;
-			}
-			if (Input.GetKeyDown("3") == true)
-			{
-				key3Press = true;
-				objectApp = true;
-			}
-			if (Input.GetKeyDown("space") == true)
-			{
-				keyspacePress = true;
-				objectApp = true;
-			}
-			if (e != null)
-			{
-				if (e.keyCode.ToString() == "10" && e.type == EventType.keyDown)
-				{
-					//if (Input.GetKeyDown(KeyCode.Return)) {
-					keyenterPress = true;
-					objectApp = true;
-					//setTap ();
-				}
-			}
+    void Update()
+    {
+        if (!inMiniGameMode) //prevents any input from being read if in minigame mode
+        {
+            if (Input.GetKeyDown("1") == true)
+            {
+                key1Press = true;
+                objectApp = true;
+            }
+            if (Input.GetKeyDown("2") == true)
+            {
+                key2Press = true;
+                objectApp = true;
+            }
+            if (Input.GetKeyDown("3") == true)
+            {
+                key3Press = true;
+                objectApp = true;
+            }
+            if (Input.GetKeyDown("space") == true)
+            {
+                keyspacePress = true;
+                objectApp = true;
+            }
+            if (e != null)
+            {
+                if (e.keyCode.ToString() == "10" && e.type == EventType.keyDown)
+                {
+                    //if (Input.GetKeyDown(KeyCode.Return)) {
+                    keyenterPress = true;
+                    objectApp = true;
+                    //setTap ();
+                }
+            }
 
             if ((PlayerPrefs.GetInt("educationOn") == 1) && (PlayerPrefs.GetInt("therapyOn") == 0))
             {
@@ -806,7 +806,7 @@ public class Test : MonoBehaviour
                 keyenterPress = false;
             }
 
-            if (objectApp && (((PlayerPrefs.GetInt("educationOn") == 1) && (PlayerPrefs.GetInt("therapyOn") == 1)) 
+            if (objectApp && (((PlayerPrefs.GetInt("educationOn") == 1) && (PlayerPrefs.GetInt("therapyOn") == 1))
                 || ((PlayerPrefs.GetInt("educationOn") == 0) && (PlayerPrefs.GetInt("therapyOn") == 0))))
             {
                 setTap();
@@ -818,373 +818,373 @@ public class Test : MonoBehaviour
                 objectApp = false;
             }
         }
-	}
+    }
 
     void playSpecialAudioEffect()
-	{
-		specialAudiosource.Stop();
-		randMusic = Random.Range(1, 25);
-		if (randMusic == 1)
-		{
-			specialAudiosource.clip = soundSpecial1;
-		}
-		else if (randMusic == 2)
-		{
-			specialAudiosource.clip = soundSpecial2;
-		}
-		else if (randMusic == 3)
-		{
-			specialAudiosource.clip = soundSpecial3;
-		}
-		else if (randMusic == 4)
-		{
-			specialAudiosource.clip = soundSpecial4;
-		}
-		else if (randMusic == 5)
-		{
-			specialAudiosource.clip = soundSpecial5;
-		}
-		else if (randMusic == 6)
-		{
-			specialAudiosource.clip = soundSpecial6;
-		}
-		else if (randMusic == 7)
-		{
-			specialAudiosource.clip = soundSpecial7;
-		}
-		else if (randMusic == 8)
-		{
-			specialAudiosource.clip = soundSpecial8;
-		}
-		else if (randMusic == 9)
-		{
-			specialAudiosource.clip = soundSpecial9;
-		}
-		else if (randMusic == 10)
-		{
-			specialAudiosource.clip = soundSpecial10;
-		}
-		else if (randMusic == 11)
-		{
-			specialAudiosource.clip = soundSpecial11;
-		}
-		else if (randMusic == 12)
-		{
-			specialAudiosource.clip = soundSpecial12;
-		}
-		else if (randMusic == 13)
-		{
-			specialAudiosource.clip = soundSpecial13;
-		}
-		else if (randMusic == 14)
-		{
-			specialAudiosource.clip = soundSpecial14;
-		}
-		else if (randMusic == 15)
-		{
-			specialAudiosource.clip = soundSpecial15;
-		}
-		else if (randMusic == 16)
-		{
-			specialAudiosource.clip = soundSpecial16;
-		}
-		else if (randMusic == 17)
-		{
-			specialAudiosource.clip = soundSpecial17;
-		}
-		else if (randMusic == 18)
-		{
-			specialAudiosource.clip = soundSpecial18;
-		}
-		if (PlayerPrefs.GetFloat("printSize") < 0.6f)
-		{
-			switch (count - 1)
-			{
-			case -1:
-				specialAudiosource.clip = soundSpecial1;
-				break;
-			case 0:
-				specialAudiosource.clip = soundSpecial2;
-				break;
-			case 1:
-				specialAudiosource.clip = soundSpecial3;
-				break;
-			case 2:
-				specialAudiosource.clip = soundSpecial4;
-				break;
-			case 3:
-				specialAudiosource.clip = soundSpecial5;
-				break;
-			case 4:
-				specialAudiosource.clip = soundSpecial6;
-				break;
-			case 5:
-				specialAudiosource.clip = soundSpecial7;
-				break;
-			case 6:
-				specialAudiosource.clip = soundSpecial8;
-				break;
-			case 7:
-				specialAudiosource.clip = soundSpecial9;
-				break;
-			case 8:
-				specialAudiosource.clip = soundSpecial10;
-				break;
-			case 9:
-				specialAudiosource.clip = soundSpecial11;
-				break;
-			case 10:
-				specialAudiosource.clip = soundSpecial12;
-				break;
-			case 11:
-				specialAudiosource.clip = soundSpecial13;
-				break;
-			case 12:
-				specialAudiosource.clip = soundSpecial14;
-				break;
-			case 13:
-				specialAudiosource.clip = soundSpecial15;
-				break;
-			case 14:
-				specialAudiosource.clip = soundSpecial16;
-				break;
-			case 15:
-				specialAudiosource.clip = soundSpecial17;
-				break;
-			case 16:
-				specialAudiosource.clip = soundSpecial18;
-				break;
-			default:
-				Debug.Log("This sound is not implemented");
-				break;
-			}
-		}
-		else
-		{
-			switch (count - 1)
-			{
-			case -1:
-			case 0:
-				specialAudiosource.clip = soundSpecial1;
-				break;
-			case 1:
-			case 2:
-				specialAudiosource.clip = soundSpecial2;
-				break;
-			case 3:
-			case 4:
-				specialAudiosource.clip = soundSpecial3;
-				break;
-			case 5:
-			case 6:
-				specialAudiosource.clip = soundSpecial4;
-				break;
-			case 7:
-			case 8:
-				specialAudiosource.clip = soundSpecial5;
-				break;
-			case 9:
-			case 10:
-				specialAudiosource.clip = soundSpecial6;
-				break;
-			case 11:
-			case 12:
-				specialAudiosource.clip = soundSpecial7;
-				break;
-			case 13:
-			case 14:
-				specialAudiosource.clip = soundSpecial8;
-				break;
-			case 15:
-			case 16:
-				specialAudiosource.clip = soundSpecial9;
-				break;
-			case 17:
-			case 18:
-				specialAudiosource.clip = soundSpecial10;
-				break;
-			case 19:
-			case 20:
-				specialAudiosource.clip = soundSpecial11;
-				break;
-			case 21:
-			case 22:
-				specialAudiosource.clip = soundSpecial12;
-				break;
-			case 23:
-			case 24:
-				specialAudiosource.clip = soundSpecial13;
-				break;
-			case 25:
-			case 26:
-				specialAudiosource.clip = soundSpecial14;
-				break;
-			case 27:
-			case 28:
-				specialAudiosource.clip = soundSpecial15;
-				break;
-			case 29:
-			case 30:
-				specialAudiosource.clip = soundSpecial16;
-				break;
-			case 31:
-			case 32:
-				specialAudiosource.clip = soundSpecial17;
-				break;
-			case 33:
-			case 34:
-				specialAudiosource.clip = soundSpecial18;
-				break;
-			default:
-				Debug.Log("This sound is not implemented");
-				break;
-			}
-		}
-		specialAudiosource.Play();
-	}
+    {
+        specialAudiosource.Stop();
+        randMusic = Random.Range(1, 25);
+        if (randMusic == 1)
+        {
+            specialAudiosource.clip = soundSpecial1;
+        }
+        else if (randMusic == 2)
+        {
+            specialAudiosource.clip = soundSpecial2;
+        }
+        else if (randMusic == 3)
+        {
+            specialAudiosource.clip = soundSpecial3;
+        }
+        else if (randMusic == 4)
+        {
+            specialAudiosource.clip = soundSpecial4;
+        }
+        else if (randMusic == 5)
+        {
+            specialAudiosource.clip = soundSpecial5;
+        }
+        else if (randMusic == 6)
+        {
+            specialAudiosource.clip = soundSpecial6;
+        }
+        else if (randMusic == 7)
+        {
+            specialAudiosource.clip = soundSpecial7;
+        }
+        else if (randMusic == 8)
+        {
+            specialAudiosource.clip = soundSpecial8;
+        }
+        else if (randMusic == 9)
+        {
+            specialAudiosource.clip = soundSpecial9;
+        }
+        else if (randMusic == 10)
+        {
+            specialAudiosource.clip = soundSpecial10;
+        }
+        else if (randMusic == 11)
+        {
+            specialAudiosource.clip = soundSpecial11;
+        }
+        else if (randMusic == 12)
+        {
+            specialAudiosource.clip = soundSpecial12;
+        }
+        else if (randMusic == 13)
+        {
+            specialAudiosource.clip = soundSpecial13;
+        }
+        else if (randMusic == 14)
+        {
+            specialAudiosource.clip = soundSpecial14;
+        }
+        else if (randMusic == 15)
+        {
+            specialAudiosource.clip = soundSpecial15;
+        }
+        else if (randMusic == 16)
+        {
+            specialAudiosource.clip = soundSpecial16;
+        }
+        else if (randMusic == 17)
+        {
+            specialAudiosource.clip = soundSpecial17;
+        }
+        else if (randMusic == 18)
+        {
+            specialAudiosource.clip = soundSpecial18;
+        }
+        if (PlayerPrefs.GetFloat("printSize") < 0.6f)
+        {
+            switch (count - 1)
+            {
+                case -1:
+                    specialAudiosource.clip = soundSpecial1;
+                    break;
+                case 0:
+                    specialAudiosource.clip = soundSpecial2;
+                    break;
+                case 1:
+                    specialAudiosource.clip = soundSpecial3;
+                    break;
+                case 2:
+                    specialAudiosource.clip = soundSpecial4;
+                    break;
+                case 3:
+                    specialAudiosource.clip = soundSpecial5;
+                    break;
+                case 4:
+                    specialAudiosource.clip = soundSpecial6;
+                    break;
+                case 5:
+                    specialAudiosource.clip = soundSpecial7;
+                    break;
+                case 6:
+                    specialAudiosource.clip = soundSpecial8;
+                    break;
+                case 7:
+                    specialAudiosource.clip = soundSpecial9;
+                    break;
+                case 8:
+                    specialAudiosource.clip = soundSpecial10;
+                    break;
+                case 9:
+                    specialAudiosource.clip = soundSpecial11;
+                    break;
+                case 10:
+                    specialAudiosource.clip = soundSpecial12;
+                    break;
+                case 11:
+                    specialAudiosource.clip = soundSpecial13;
+                    break;
+                case 12:
+                    specialAudiosource.clip = soundSpecial14;
+                    break;
+                case 13:
+                    specialAudiosource.clip = soundSpecial15;
+                    break;
+                case 14:
+                    specialAudiosource.clip = soundSpecial16;
+                    break;
+                case 15:
+                    specialAudiosource.clip = soundSpecial17;
+                    break;
+                case 16:
+                    specialAudiosource.clip = soundSpecial18;
+                    break;
+                default:
+                    Debug.Log("This sound is not implemented");
+                    break;
+            }
+        }
+        else
+        {
+            switch (count - 1)
+            {
+                case -1:
+                case 0:
+                    specialAudiosource.clip = soundSpecial1;
+                    break;
+                case 1:
+                case 2:
+                    specialAudiosource.clip = soundSpecial2;
+                    break;
+                case 3:
+                case 4:
+                    specialAudiosource.clip = soundSpecial3;
+                    break;
+                case 5:
+                case 6:
+                    specialAudiosource.clip = soundSpecial4;
+                    break;
+                case 7:
+                case 8:
+                    specialAudiosource.clip = soundSpecial5;
+                    break;
+                case 9:
+                case 10:
+                    specialAudiosource.clip = soundSpecial6;
+                    break;
+                case 11:
+                case 12:
+                    specialAudiosource.clip = soundSpecial7;
+                    break;
+                case 13:
+                case 14:
+                    specialAudiosource.clip = soundSpecial8;
+                    break;
+                case 15:
+                case 16:
+                    specialAudiosource.clip = soundSpecial9;
+                    break;
+                case 17:
+                case 18:
+                    specialAudiosource.clip = soundSpecial10;
+                    break;
+                case 19:
+                case 20:
+                    specialAudiosource.clip = soundSpecial11;
+                    break;
+                case 21:
+                case 22:
+                    specialAudiosource.clip = soundSpecial12;
+                    break;
+                case 23:
+                case 24:
+                    specialAudiosource.clip = soundSpecial13;
+                    break;
+                case 25:
+                case 26:
+                    specialAudiosource.clip = soundSpecial14;
+                    break;
+                case 27:
+                case 28:
+                    specialAudiosource.clip = soundSpecial15;
+                    break;
+                case 29:
+                case 30:
+                    specialAudiosource.clip = soundSpecial16;
+                    break;
+                case 31:
+                case 32:
+                    specialAudiosource.clip = soundSpecial17;
+                    break;
+                case 33:
+                case 34:
+                    specialAudiosource.clip = soundSpecial18;
+                    break;
+                default:
+                    Debug.Log("This sound is not implemented");
+                    break;
+            }
+        }
+        specialAudiosource.Play();
+    }
 
-	void playSpecialAnimationEffect()
-	{
-		switch (count - 1)
-		{
-		case -1:
-		case 0:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect1, true);
-			specialAnimationEffect1.GetComponent<ParticleSystem>().Play();
-			break;
-		case 1:
-		case 2:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect2, true);
-			specialAnimationEffect2.GetComponent<ParticleSystem>().Play();
-			break;
-		case 3:
-		case 4:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect3, true);
-			specialAnimationEffect3.GetComponent<ParticleSystem>().Play();
-			break;
-		case 5:
-		case 6:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect4, true);
-			specialAnimationEffect4.GetComponent<ParticleSystem>().Play();
-			break;
-		case 7:
-		case 8:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect5, true);
-			specialAnimationEffect5.GetComponent<ParticleSystem>().Play();
-			break;
-		case 9:
-		case 10:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect6, true);
-			specialAnimationEffect6.GetComponent<ParticleSystem>().Play();
-			break;
-		case 11:
-		case 12:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect7, true);
-			specialAnimationEffect7.GetComponent<ParticleSystem>().Play();
-			break;
-		case 13:
-		case 14:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect8, true);
-			specialAnimationEffect8.GetComponent<ParticleSystem>().Play();
-			break;
-		case 15:
-		case 16:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect9, true);
-			specialAnimationEffect9.GetComponent<ParticleSystem>().Play();
-			break;
-		case 17:
-		case 18:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect10, true);
-			specialAnimationEffect10.GetComponent<ParticleSystem>().Play();
-			break;
-		case 19:
-		case 20:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect11, true);
-			specialAnimationEffect11.GetComponent<ParticleSystem>().Play();
-			break;
-		case 21:
-		case 22:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect12, true);
-			specialAnimationEffect12.GetComponent<ParticleSystem>().Play();
-			break;
-		case 23:
-		case 24:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect13, true);
-			specialAnimationEffect13.GetComponent<ParticleSystem>().Play();
-			break;
-		case 25:
-		case 26:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect14, true);
-			specialAnimationEffect14.GetComponent<ParticleSystem>().Play();
-			break;
-		case 27:
-		case 28:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect15, true);
-			specialAnimationEffect15.GetComponent<ParticleSystem>().Play();
-			break;
-		case 29:
-		case 30:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect16, true);
-			specialAnimationEffect16.GetComponent<ParticleSystem>().Play();
-			break;
-		case 31:
-		case 32:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect17, true);
-			specialAnimationEffect17.GetComponent<ParticleSystem>().Play();
-			break;
-		case 33:
-		case 34:
-			CFX_SpawnSystem.GetNextObject(specialAnimationEffect18, true);
-			specialAnimationEffect18.GetComponent<ParticleSystem>().Play();
-			break;
-		default:
-			Debug.Log("This animation effect is not implemented");
-			break;
-		}
-	}
+    void playSpecialAnimationEffect()
+    {
+        switch (count - 1)
+        {
+            case -1:
+            case 0:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect1, true);
+                specialAnimationEffect1.GetComponent<ParticleSystem>().Play();
+                break;
+            case 1:
+            case 2:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect2, true);
+                specialAnimationEffect2.GetComponent<ParticleSystem>().Play();
+                break;
+            case 3:
+            case 4:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect3, true);
+                specialAnimationEffect3.GetComponent<ParticleSystem>().Play();
+                break;
+            case 5:
+            case 6:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect4, true);
+                specialAnimationEffect4.GetComponent<ParticleSystem>().Play();
+                break;
+            case 7:
+            case 8:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect5, true);
+                specialAnimationEffect5.GetComponent<ParticleSystem>().Play();
+                break;
+            case 9:
+            case 10:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect6, true);
+                specialAnimationEffect6.GetComponent<ParticleSystem>().Play();
+                break;
+            case 11:
+            case 12:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect7, true);
+                specialAnimationEffect7.GetComponent<ParticleSystem>().Play();
+                break;
+            case 13:
+            case 14:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect8, true);
+                specialAnimationEffect8.GetComponent<ParticleSystem>().Play();
+                break;
+            case 15:
+            case 16:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect9, true);
+                specialAnimationEffect9.GetComponent<ParticleSystem>().Play();
+                break;
+            case 17:
+            case 18:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect10, true);
+                specialAnimationEffect10.GetComponent<ParticleSystem>().Play();
+                break;
+            case 19:
+            case 20:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect11, true);
+                specialAnimationEffect11.GetComponent<ParticleSystem>().Play();
+                break;
+            case 21:
+            case 22:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect12, true);
+                specialAnimationEffect12.GetComponent<ParticleSystem>().Play();
+                break;
+            case 23:
+            case 24:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect13, true);
+                specialAnimationEffect13.GetComponent<ParticleSystem>().Play();
+                break;
+            case 25:
+            case 26:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect14, true);
+                specialAnimationEffect14.GetComponent<ParticleSystem>().Play();
+                break;
+            case 27:
+            case 28:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect15, true);
+                specialAnimationEffect15.GetComponent<ParticleSystem>().Play();
+                break;
+            case 29:
+            case 30:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect16, true);
+                specialAnimationEffect16.GetComponent<ParticleSystem>().Play();
+                break;
+            case 31:
+            case 32:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect17, true);
+                specialAnimationEffect17.GetComponent<ParticleSystem>().Play();
+                break;
+            case 33:
+            case 34:
+                CFX_SpawnSystem.GetNextObject(specialAnimationEffect18, true);
+                specialAnimationEffect18.GetComponent<ParticleSystem>().Play();
+                break;
+            default:
+                Debug.Log("This animation effect is not implemented");
+                break;
+        }
+    }
 
-	public void OnClick()
-	{
-		if (enabled == true && !inTutorialMode)
-		{
-			load = false;
-			enabled = false;
-			float nextAlpha = next.alpha;
-			float coverAlpha = cover.alpha;
-			play.text = "";
-			//cover.alpha = 0;
-			next.alpha = 0;
-			exitBack.GetComponent<Collider>().enabled = false;
-			exitBack.alpha = 0;
-			playBack2.alpha = 0;
-			exitLabel.alpha = 0;
-			repeatBack.GetComponent<Collider>().enabled = false;
-			repeatBack.alpha = 0;
-			repeatBack2.alpha = 0;
-			repeatLabel.alpha = 0;
-			backBack.GetComponent<Collider>().enabled = false;
-			backBack.alpha = 0;
-			backBack2.alpha = 0;
-			backLabel.alpha = 0;
+    public void OnClick()
+    {
+        if (enabled == true && !inTutorialMode)
+        {
+            load = false;
+            enabled = false;
+            float nextAlpha = next.alpha;
+            float coverAlpha = cover.alpha;
+            play.text = "";
+            //cover.alpha = 0;
+            next.alpha = 0;
+            exitBack.GetComponent<Collider>().enabled = false;
+            exitBack.alpha = 0;
+            playBack2.alpha = 0;
+            exitLabel.alpha = 0;
+            repeatBack.GetComponent<Collider>().enabled = false;
+            repeatBack.alpha = 0;
+            repeatBack2.alpha = 0;
+            repeatLabel.alpha = 0;
+            backBack.GetComponent<Collider>().enabled = false;
+            backBack.alpha = 0;
+            backBack2.alpha = 0;
+            backLabel.alpha = 0;
 
-			specialAnimationEffect1.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect2.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect3.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect4.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect5.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect6.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect7.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect8.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect9.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect10.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect11.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect12.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect13.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect14.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect15.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect16.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect17.GetComponent<ParticleSystem>().Stop();
-			specialAnimationEffect18.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect1.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect2.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect3.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect4.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect5.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect6.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect7.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect8.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect9.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect10.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect11.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect12.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect13.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect14.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect15.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect16.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect17.GetComponent<ParticleSystem>().Stop();
+            specialAnimationEffect18.GetComponent<ParticleSystem>().Stop();
 
 
             ////every 5 levels, if minigame option is active, display minigame instead of going to next page
@@ -1223,67 +1223,67 @@ public class Test : MonoBehaviour
         }
     }
 
-	//check which minigames have already been played
-	bool CanPlay ()
-	{
-		if (count >= 7 && !playedGame1)
-			return true;
-		else if (count >= 17 && !playedGame2)
-			return true;
-		else if (count >= 27 && !playedGame3)
-			return true;
-		//else if (count >= 18 && !playedGame4)
-		//    return true;
-		else
-			return false;
-	}
+    //check which minigames have already been played
+    bool CanPlay()
+    {
+        if (count >= 7 && !playedGame1)
+            return true;
+        else if (count >= 17 && !playedGame2)
+            return true;
+        else if (count >= 27 && !playedGame3)
+            return true;
+        //else if (count >= 18 && !playedGame4)
+        //    return true;
+        else
+            return false;
+    }
 
     //minigame logic here
     public void SetMiniGame()
-	{
-		inMiniGameMode = true;
-		if (count >= 7)
-			playedGame1 = true;
-		if (count >= 17)
-			playedGame2 = true;
-		if (count >= 27)
-			playedGame3 = true;
+    {
+        inMiniGameMode = true;
+        if (count >= 7)
+            playedGame1 = true;
+        if (count >= 17)
+            playedGame2 = true;
+        if (count >= 27)
+            playedGame3 = true;
         //if (count >= 18)
         //    playedGame4 = true;
 
         audiosource.Stop();
-		mainCamera.gameObject.SetActive(false);
-		storyView.alpha = 0f;
+        mainCamera.gameObject.SetActive(false);
+        storyView.alpha = 0f;
         //ls.LoadScene("MiniGameScreen_Story");
         //ls.ChangeText("Let's play...");
         SceneManager.LoadSceneAsync("LoadingScreen");
-		StartCoroutine(GoToScene("MiniGameScreen_Story"));
-		//enabled = false;
-	}
+        StartCoroutine(GoToScene("MiniGameScreen_Story"));
+        //enabled = false;
+    }
 
-	IEnumerator GoToScene(string sceneName)
-	{
+    IEnumerator GoToScene(string sceneName)
+    {
         yield return new WaitForSeconds(0.25f);
-		SceneManager.LoadSceneAsync(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
 
         if (SceneManager.GetActiveScene().name == "LoadingScreen")
             SceneManager.UnloadSceneAsync("LoadingScreen");
     }
 
-	public void EndMiniGame()
-	{
-  //      Scene scene = SceneManager.GetSceneByName("1stScene");
-		//if ((scene != null) && (!scene.isLoaded))
-		//{
-		//	StartCoroutine(GoToScene("Empty"));
-		//}
-		//SceneManager.UnloadSceneAsync("MiniGameScreen_Story");
-		//Resources.UnloadUnusedAssets();
+    public void EndMiniGame()
+    {
+        //      Scene scene = SceneManager.GetSceneByName("1stScene");
+        //if ((scene != null) && (!scene.isLoaded))
+        //{
+        //	StartCoroutine(GoToScene("Empty"));
+        //}
+        //SceneManager.UnloadSceneAsync("MiniGameScreen_Story");
+        //Resources.UnloadUnusedAssets();
 
         StartCoroutine(TurnOnCamera());
-	}
-	IEnumerator TurnOnCamera()
-	{
+    }
+    IEnumerator TurnOnCamera()
+    {
         yield return new WaitForSeconds(1f);
         SceneManager.LoadSceneAsync("Empty");
 
@@ -1294,31 +1294,31 @@ public class Test : MonoBehaviour
         next.alpha = 1f;
         cover.alpha = 1f;
         OnClick();
-	}
+    }
 
-	//void PlayCharacterAnim (GameObject character)
-	//{
-	//	character.GetComponentInChildren<ButtonState>().OnButtonPressed();
-	//	//character.GetComponentInChildren<ButtonState>().OnButtonRelease();
-	//}
+    //void PlayCharacterAnim (GameObject character)
+    //{
+    //	character.GetComponentInChildren<ButtonState>().OnButtonPressed();
+    //	//character.GetComponentInChildren<ButtonState>().OnButtonRelease();
+    //}
 
-	IEnumerator FadeOther(UIWidget w, float durationInSeconds)
-	{
-		float startA = w.alpha;
-		float currentTime = 0f;
-		while (currentTime < durationInSeconds)
-		{
-			w.alpha = Mathf.Lerp(startA, 0f, currentTime / durationInSeconds);
-			currentTime += Time.deltaTime;
-			yield return null;
-		}
-		sprite.mainTexture = Resources.Load("image1") as Texture;
-		StartCoroutine(FadeIn(sprite, 0.5f, startA));
-	}
+    IEnumerator FadeOther(UIWidget w, float durationInSeconds)
+    {
+        float startA = w.alpha;
+        float currentTime = 0f;
+        while (currentTime < durationInSeconds)
+        {
+            w.alpha = Mathf.Lerp(startA, 0f, currentTime / durationInSeconds);
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        sprite.mainTexture = Resources.Load("image1") as Texture;
+        StartCoroutine(FadeIn(sprite, 0.5f, startA));
+    }
 
-	IEnumerator FadeOuter(UIWidget w, float durationInSeconds, float nextAlpha, float coverAlpha)
-	{
-		inMiniGameMode = false; //ensures the scene has changed before OnClick checks if minigame is active; update OnClick so this isn't necissary
+    IEnumerator FadeOuter(UIWidget w, float durationInSeconds, float nextAlpha, float coverAlpha)
+    {
+        inMiniGameMode = false; //ensures the scene has changed before OnClick checks if minigame is active; update OnClick so this isn't necissary
 
         float startA = w.alpha;
         //label.text = "";
@@ -1326,7 +1326,7 @@ public class Test : MonoBehaviour
         GameObject pagePrefab = null;
 
         if (count == -1)
-		{
+        {
             //EnableCharacters(page1);
             if (!back)
             {
@@ -1346,16 +1346,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part1;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image1") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "There is money, \n money everywhere. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 0)
-		{
+            audiosource.clip = part1;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image1") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "There is money, \n money everywhere. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 0)
+        {
             //DisableCharacters(page2);
             //EnableCharacters(page1);
 
@@ -1381,16 +1381,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part2;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image1") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Money for counting. \n Money to share. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 1)
-		{
+            audiosource.clip = part2;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image1") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Money for counting. \n Money to share. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 1)
+        {
             yield return null;
 
             if (!back)
@@ -1412,16 +1412,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part3;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image2") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "There are lots of \n different coins to count. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 2)
-		{
+            audiosource.clip = part3;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image2") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "There are lots of \n different coins to count. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 2)
+        {
             //DisableCharacters(page3);
             //EnableCharacters(page2);
 
@@ -1445,16 +1445,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part4;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image2") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "And each coin is worth \n a different amount. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
+            audiosource.clip = part4;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image2") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "And each coin is worth \n a different amount. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
         else if (count == 3)
-		{
+        {
             //DisableCharacters(page2);
             //EnableCharacters(page3);
 
@@ -1482,16 +1482,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part5;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image3") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Count the pennies first \n because they are so much fun. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 4)
-		{
+            audiosource.clip = part5;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image3") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Count the pennies first \n because they are so much fun. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 4)
+        {
             //DisableCharacters(page4);
             //EnableCharacters(page3);
 
@@ -1517,16 +1517,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part6;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image3") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Each penny's worth 1 cent. \n Let's count them one by one. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 5)
-		{
+            audiosource.clip = part6;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image3") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Each penny's worth 1 cent. \n Let's count them one by one. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 5)
+        {
             //DisableCharacters(page3);
             //EnableCharacters(page4);
 
@@ -1554,16 +1554,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part7;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image4") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "That might not be much, \n but it all adds up. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 6)
-		{
+            audiosource.clip = part7;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image4") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "That might not be much, \n but it all adds up. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 6)
+        {
             //DisableCharacters(page5);
             //EnableCharacters(page4);
 
@@ -1589,16 +1589,17 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part8;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image4") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Especially when a hundred pennies \n fill a dollar's giant cup! ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-    /**/else if (count == 7)
-		{
+            audiosource.clip = part8;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image4") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Especially when a hundred pennies \n fill a dollar's giant cup! ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        /**/
+        else if (count == 7)
+        {
             //DisableCharacters(page4);
             //EnableCharacters(page5);
 
@@ -1627,16 +1628,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part9;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image5") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Let's count nickels next \n because they are worth five. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 8)
-		{
+            audiosource.clip = part9;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image5") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Let's count nickels next \n because they are worth five. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 8)
+        {
             //DisableCharacters(page6);
             //EnableCharacters(page5);
 
@@ -1662,16 +1663,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part10;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image5") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "So five pennies, \n that's worth one nickel. That's jive. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 9)
-		{
+            audiosource.clip = part10;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image5") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "So five pennies, \n that's worth one nickel. That's jive. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 9)
+        {
             //DisableCharacters(page5);
             //EnableCharacters(page6);
 
@@ -1699,16 +1700,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part11;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image6") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Keep counting by fives. \n Five... ten... fifteen... twenty. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 10)
-		{
+            audiosource.clip = part11;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image6") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Keep counting by fives. \n Five... ten... fifteen... twenty. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 10)
+        {
             //DisableCharacters(page7);
             //EnableCharacters(page6);
 
@@ -1734,16 +1735,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part12;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image6") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "A pile of twenty nickels equals a dollar. \n Now that's plenty! ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 11)
-		{
+            audiosource.clip = part12;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image6") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "A pile of twenty nickels equals a dollar. \n Now that's plenty! ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 11)
+        {
             //DisableCharacters(page6);
             //EnableCharacters(page7);
 
@@ -1771,16 +1772,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part13;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image7") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Next we will count \n these silver coins that are so tiny. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 12)
-		{
+            audiosource.clip = part13;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image7") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Next we will count \n these silver coins that are so tiny. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 12)
+        {
             //DisableCharacters(page8);
             //EnableCharacters(page7);
 
@@ -1806,16 +1807,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part14;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image7") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "They are dimes \n and they are extra super shiny! ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 13)
-		{
+            audiosource.clip = part14;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image7") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "They are dimes \n and they are extra super shiny! ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 13)
+        {
             //DisableCharacters(page7);
             //EnableCharacters(page8);
 
@@ -1843,14 +1844,14 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part15;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image8") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Two nickels equals one dime \n or ten pennies if you bother. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
+            audiosource.clip = part15;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image8") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Two nickels equals one dime \n or ten pennies if you bother. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
         else if (count == 14)
         {
             //DisableCharacters(page9);
@@ -1958,8 +1959,9 @@ public class Test : MonoBehaviour
             message = "Now a quarter is worth five nickels \n if you needed to barter. ";
             StartCoroutine(TypeText(nextAlpha, coverAlpha));
         }
-    /**/else if (count == 17)
-		{
+        /**/
+        else if (count == 17)
+        {
             //DisableCharacters(page9);
             //EnableCharacters(page10);
 
@@ -1988,16 +1990,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part19;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image10") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Or you could count twenty-five \n pennies if you can endure. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 18)
-		{
+            audiosource.clip = part19;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image10") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Or you could count twenty-five \n pennies if you can endure. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 18)
+        {
             //DisableCharacters(page11);
             //EnableCharacters(page10);
 
@@ -2023,16 +2025,16 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part20;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image10") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Because four quarters equals a dollar \n that's for sure! ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
-		else if (count == 19)
-		{
+            audiosource.clip = part20;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image10") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Because four quarters equals a dollar \n that's for sure! ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
+        else if (count == 19)
+        {
             //DisableCharacters(page10);
             //EnableCharacters(page11);
 
@@ -2060,14 +2062,14 @@ public class Test : MonoBehaviour
             }
 
             audiosource.Stop();
-			audiosource.clip = part21;
-			audiosource.Play();
-			count++;
-			sprite.mainTexture = Resources.Load("image11") as Texture;
-			StartCoroutine(FadeIn(sprite, 0.5f, startA));
-			message = "Next is the fifty-cent piece, \n which we call a half-dollar. ";
-			StartCoroutine(TypeText(nextAlpha, coverAlpha));
-		}
+            audiosource.clip = part21;
+            audiosource.Play();
+            count++;
+            sprite.mainTexture = Resources.Load("image11") as Texture;
+            StartCoroutine(FadeIn(sprite, 0.5f, startA));
+            message = "Next is the fifty-cent piece, \n which we call a half-dollar. ";
+            StartCoroutine(TypeText(nextAlpha, coverAlpha));
+        }
         else if (count == 20)
         {
             //DisableCharacters(page12);
@@ -2319,7 +2321,8 @@ public class Test : MonoBehaviour
             message = "We still make a dollar \n for the final amount. ";
             StartCoroutine(TypeText(nextAlpha, coverAlpha));
         }
-    /**/else if (count == 27)
+        /**/
+        else if (count == 27)
         {
             //DisableCharacters(page14);
             //EnableCharacters(page15);
@@ -2605,14 +2608,14 @@ public class Test : MonoBehaviour
             StartCoroutine(TypeText(nextAlpha, coverAlpha));
         }
         else if (count == 35)
-		{
+        {
             //DisableCharacters(page18);
-			//ls.GetComponent<UIPanel>().alpha = 1f;
-			storyView.alpha = 0f;
+            //ls.GetComponent<UIPanel>().alpha = 1f;
+            storyView.alpha = 0f;
 
             //SceneManager.LoadSceneAsync("LoadingScreen");
-			StartCoroutine(DisplayScene());
-		}
+            StartCoroutine(DisplayScene());
+        }
         //}
 
         back = false;
@@ -2620,99 +2623,85 @@ public class Test : MonoBehaviour
     }
 
 
-	IEnumerator FadeIn(UIWidget w, float durationInSeconds, float a)
-	{
-		float startA = w.alpha;
-		float currentTime = 0f;
-		while (currentTime < durationInSeconds)
-		{
-			w.alpha = Mathf.Lerp(startA, a, currentTime / durationInSeconds);
-			currentTime += Time.deltaTime;
-			yield return null;
-		}
-		w.alpha = startAlpha;
-	}
+    IEnumerator FadeIn(UIWidget w, float durationInSeconds, float a)
+    {
+        float startA = w.alpha;
+        float currentTime = 0f;
+        while (currentTime < durationInSeconds)
+        {
+            w.alpha = Mathf.Lerp(startA, a, currentTime / durationInSeconds);
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        w.alpha = startAlpha;
+    }
 
-	IEnumerator TypeText(float nextAlpha, float coverAlpha)
-	{
-		load = true;
-		completetext = false;
+    IEnumerator TypeText(float nextAlpha, float coverAlpha)
+    {
+        load = true;
+        completetext = false;
         label.text = "";
 
         int spaces = 0;
-		if ((PlayerPrefs.GetInt("typing") == 1) && (PlayerPrefs.GetInt("highlight") == 0))
-		{
-			label.text += "[FFFF00]";
-			foreach (char letter in message.ToCharArray())
-			{
-				if (completetext == true)
-				{
-					label.text = message;
-					break;
-				}
-				label.text += letter;
+        if ((PlayerPrefs.GetInt("typing") == 1) && (PlayerPrefs.GetInt("highlight") == 0))
+        {
+            label.text += "[FFFF00]";
+            foreach (char letter in message.ToCharArray())
+            {
+                if (completetext == true)
+                {
+                    label.text = message;
+                    break;
+                }
+                label.text += letter;
                 if (letter == ' ')
-				{
-					spaces++;
-				}
-				yield return 0;
-				yield return new WaitForSeconds(0.038f);
-			}
-		}
-		else
-		{
-			if (PlayerPrefs.GetInt("typing") == 1)
-			{
-				foreach (char letter in message.ToCharArray())
-				{
-					if (completetext == true)
-					{
-						label.text = message;
-						break;
-					}
-					label.text += letter;
+                {
+                    spaces++;
+                }
+                yield return 0;
+                yield return new WaitForSeconds(0.038f);
+            }
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("typing") == 1)
+            {
+                foreach (char letter in message.ToCharArray())
+                {
+                    if (completetext == true)
+                    {
+                        label.text = message;
+                        break;
+                    }
+                    label.text += letter;
                     yield return 0;
-					yield return new WaitForSeconds(0.038f);
-				}
-			}
-			else if (PlayerPrefs.GetInt("highlight") == 0)
-			{
-				label.text = "[FFFF00]" + message;
-				string[] parts = new string[2];
-				parts[0] = "[FFFF00]";
-				parts[1] = "";
-				bool twosentence = false;
-				foreach (char letter in message.ToCharArray())
-				{
-					parts[0] += letter;
-					parts[1] += letter;
-					if (letter == '\n')
-					{
-						parts[0] += "[-]";
-						parts[1] += "[FFFF00]";
-						twosentence = true;
-					}
-				}
-				label.text = parts[0];
-				if (twosentence)
-				{
-					yield return 0;
-					for (int i = 0; i < 22; i++)
-					{
-                        yield return new WaitForSeconds((audiosource.clip.length / 2) / 20);
-
-                        if (completetext == true)
-                        {
-                            break;
-                        }
-					}
-					label.text = parts[1];
-				}
-				yield return 0;
-				if (completetext == false)
-				{
-					for (int i = 0; i < 22; i++)
-					{
+                    yield return new WaitForSeconds(0.038f);
+                }
+            }
+            else if (PlayerPrefs.GetInt("highlight") == 0)
+            {
+                label.text = "[FFFF00]" + message;
+                string[] parts = new string[2];
+                parts[0] = "[FFFF00]";
+                parts[1] = "";
+                bool twosentence = false;
+                foreach (char letter in message.ToCharArray())
+                {
+                    parts[0] += letter;
+                    parts[1] += letter;
+                    if (letter == '\n')
+                    {
+                        parts[0] += "[-]";
+                        parts[1] += "[FFFF00]";
+                        twosentence = true;
+                    }
+                }
+                label.text = parts[0];
+                if (twosentence)
+                {
+                    yield return 0;
+                    for (int i = 0; i < 22; i++)
+                    {
                         yield return new WaitForSeconds((audiosource.clip.length / 2) / 20);
 
                         if (completetext == true)
@@ -2720,96 +2709,110 @@ public class Test : MonoBehaviour
                             break;
                         }
                     }
-				}
-				label.text = message;
-			}
-			else
-			{
-				label.text = message;
-			}
-		}
-		
-		completetext = true;
-		next.alpha = 1f;// nextAlpha;
-		//cover.alpha = coverAlpha;
-		//play.text = "Next";
+                    label.text = parts[1];
+                }
+                yield return 0;
+                if (completetext == false)
+                {
+                    for (int i = 0; i < 22; i++)
+                    {
+                        yield return new WaitForSeconds((audiosource.clip.length / 2) / 20);
 
-		exitBack.GetComponent<Collider>().enabled = true;
-		exitBack.alpha = 255;
-		playBack2.alpha = 255;
-		exitLabel.alpha = 255;
-		repeatBack.GetComponent<Collider>().enabled = true;
-		repeatBack.alpha = 255;
-		repeatBack2.alpha = 255;
-		repeatLabel.alpha = 255;
-		backBack.GetComponent<Collider>().enabled = true;
-		backBack.alpha = 255;
-		backBack2.alpha = 255;
-		backLabel.alpha = 255;
+                        if (completetext == true)
+                        {
+                            break;
+                        }
+                    }
+                }
+                label.text = message;
+            }
+            else
+            {
+                label.text = message;
+            }
+        }
 
-		if (count == 0)
-		{
-			//play.text = "Play";
-		}
-		enabled = true;
+        completetext = true;
+        next.alpha = 1f;// nextAlpha;
+                        //cover.alpha = coverAlpha;
+                        //play.text = "Next";
 
-		if (backPage)
-		{
-			backPage = false;
-			backClick();
-		}
-		if (nextPage)
-		{
-			nextPage = false;
-			OnClick();
-		}
-		if (repeatPage)
-		{
-			repeatPage = false;
-			repeatClick();
-		}
-	}
+        exitBack.GetComponent<Collider>().enabled = true;
+        exitBack.alpha = 255;
+        playBack2.alpha = 255;
+        exitLabel.alpha = 255;
+        repeatBack.GetComponent<Collider>().enabled = true;
+        repeatBack.alpha = 255;
+        repeatBack2.alpha = 255;
+        repeatLabel.alpha = 255;
+        backBack.GetComponent<Collider>().enabled = true;
+        backBack.alpha = 255;
+        backBack2.alpha = 255;
+        backLabel.alpha = 255;
 
-	IEnumerator DisplayScene()
-	{
+        if (count == 0)
+        {
+            //play.text = "Play";
+        }
+        enabled = true;
+
+        if (backPage)
+        {
+            backPage = false;
+            backClick();
+        }
+        if (nextPage)
+        {
+            nextPage = false;
+            OnClick();
+        }
+        if (repeatPage)
+        {
+            repeatPage = false;
+            repeatClick();
+        }
+    }
+
+    IEnumerator DisplayScene()
+    {
         SceneManager.LoadSceneAsync("LoadingScreen");
 
         yield return new WaitForSeconds(1);
-		SceneManager.LoadSceneAsync(1);
-		Destroy(storyParent);
+        SceneManager.LoadSceneAsync(1);
+        Destroy(storyParent);
 
         if (SceneManager.GetActiveScene().name == "LoadingScreen")
             SceneManager.UnloadSceneAsync("LoadingScreen");
     }
 
     IEnumerable RepeatScene()
-	{
-		yield return new WaitForSeconds(0);
-		SceneManager.LoadScene("1stScene");
-		Destroy(storyParent);
+    {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene("1stScene");
+        Destroy(storyParent);
 
         if (SceneManager.GetActiveScene().name == "LoadingScreen")
             SceneManager.UnloadSceneAsync("LoadingScreen");
     }
 
-	public void Turotiral1OnClick()
-	{
-		Tutorial_1.SetActive(false);
-		Tutorial_2.SetActive(true);
-		PlayerPrefs.SetInt("tutorial", 1);
-	}
-	public void Turotiral2OnClick()
-	{
-		Tutorial_2.SetActive(false);
-		Tutorial_3.SetActive(true);
-		PlayerPrefs.SetInt("tutorial", 2);
+    public void Turotiral1OnClick()
+    {
+        Tutorial_1.SetActive(false);
+        Tutorial_2.SetActive(true);
+        PlayerPrefs.SetInt("tutorial", 1);
     }
-	public void Turotiral3OnClick()
-	{
-		Tutorial_3.SetActive(false);
-		inTutorialMode = false;
-		//Set finish tutorial
-		PlayerPrefs.SetInt("tutorial", 3);
+    public void Turotiral2OnClick()
+    {
+        Tutorial_2.SetActive(false);
+        Tutorial_3.SetActive(true);
+        PlayerPrefs.SetInt("tutorial", 2);
+    }
+    public void Turotiral3OnClick()
+    {
+        Tutorial_3.SetActive(false);
+        inTutorialMode = false;
+        //Set finish tutorial
+        PlayerPrefs.SetInt("tutorial", 3);
     }
 }
 

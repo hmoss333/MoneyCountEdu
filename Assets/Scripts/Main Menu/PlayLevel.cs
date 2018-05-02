@@ -18,6 +18,7 @@ public class PlayLevel : MonoBehaviour {
 	private bool keyenterPress = false;
 
     private bool objectApp = false;
+    private bool loading = false;
 
 	//public UIPanel loadingScreen;
 	public UIPanel frontPanel;
@@ -100,10 +101,15 @@ public class PlayLevel : MonoBehaviour {
 		if (on)
         {
 			frontPanel.alpha = 0f;
-            SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
-            Resources.UnloadUnusedAssets();
 
-            StartCoroutine(GoToScene(levelToLoad));
+            if (!loading)
+            {
+                SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
+                Resources.UnloadUnusedAssets();
+
+                StartCoroutine(GoToScene(levelToLoad));
+                loading = true;
+            }
         }
 	}
 	
