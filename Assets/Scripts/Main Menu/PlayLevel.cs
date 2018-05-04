@@ -98,7 +98,7 @@ public class PlayLevel : MonoBehaviour {
 
 	public void OnClick()
     {
-		if (on)
+		if (on && RedeemCode.verified)
         {
 			frontPanel.alpha = 0f;
 

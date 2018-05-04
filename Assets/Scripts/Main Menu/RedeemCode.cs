@@ -15,8 +15,12 @@ public class RedeemCode : MonoBehaviour {
     public GameObject redeemErrorMessage;
     UITexture background;
 
+    public static bool verified;
+
     // Use this for initialization
     void Start () {
+        verified = false;
+
         background = GameObject.FindObjectOfType<UITexture>();
         background.mainTexture = Resources.Load("background") as Texture;
 
@@ -68,6 +72,7 @@ public class RedeemCode : MonoBehaviour {
         redeemPanel.alpha = 0f;
         frontPanel.alpha = 1f;
         background.mainTexture = Resources.Load("moneycount_opening") as Texture; //update file name for respective main menu background
+        verified = true;
     }
 
     public void ErrorMessageButton()

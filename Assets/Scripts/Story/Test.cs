@@ -196,7 +196,7 @@ public class Test : MonoBehaviour
 	keyenterPress = true;
 	}
 	objectApp = true;
-	setTap ();
+	//setTap ();
 	}
 
 	void iCadeKeyPressedCallback(int i)
@@ -1356,11 +1356,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 0)
         {
-            //DisableCharacters(page2);
-            //EnableCharacters(page1);
-
-            //if (back)
-            //    AnimatePage(page1);
+            yield return null;
 
             if (back)
             {
@@ -1422,11 +1418,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 2)
         {
-            //DisableCharacters(page3);
-            //EnableCharacters(page2);
-
-            //if (back)
-            //    AnimatePage(page2);
+            yield return null;
 
             if (back)
             {
@@ -1455,12 +1447,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 3)
         {
-            //DisableCharacters(page2);
-            //EnableCharacters(page3);
-
-            //if (!back)
-            //    AnimatePage(page3);
-
             yield return null;
 
             if (!back)
@@ -1492,11 +1478,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 4)
         {
-            //DisableCharacters(page4);
-            //EnableCharacters(page3);
-
-            //if (back)
-            //    AnimatePage(page3);
+            yield return null;
 
             if (back)
             {
@@ -1527,12 +1509,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 5)
         {
-            //DisableCharacters(page3);
-            //EnableCharacters(page4);
-
-            //if (!back)
-            //    AnimatePage(page4);
-
             yield return null;
 
             if (!back)
@@ -1564,11 +1540,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 6)
         {
-            //DisableCharacters(page5);
-            //EnableCharacters(page4);
-
-            //if (back)
-            //    AnimatePage(page4);
+            yield return null;
 
             if (back)
             {
@@ -1600,12 +1572,6 @@ public class Test : MonoBehaviour
         /**/
         else if (count == 7)
         {
-            //DisableCharacters(page4);
-            //EnableCharacters(page5);
-
-            //if (!back)
-            //    AnimatePage(page5);
-
             if (PlayerPrefs.GetInt("minigames") != 1)
                 yield return null;
 
@@ -1638,11 +1604,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 8)
         {
-            //DisableCharacters(page6);
-            //EnableCharacters(page5);
-
-            //if (back)
-            //    AnimatePage(page5);
+            yield return null;
 
             if (back)
             {
@@ -1673,12 +1635,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 9)
         {
-            //DisableCharacters(page5);
-            //EnableCharacters(page6);
-
-            //if (!back)
-            //    AnimatePage(page6);
-
             yield return null;
 
             if (!back)
@@ -1710,11 +1666,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 10)
         {
-            //DisableCharacters(page7);
-            //EnableCharacters(page6);
-
-            //if (back)
-            //    AnimatePage(page6);
+            yield return null;
 
             if (back)
             {
@@ -1745,12 +1697,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 11)
         {
-            //DisableCharacters(page6);
-            //EnableCharacters(page7);
-
-            //if (!back)
-            //    AnimatePage(page7);
-
             yield return null;
 
             if (!back)
@@ -1782,11 +1728,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 12)
         {
-            //DisableCharacters(page8);
-            //EnableCharacters(page7);
-
-            //if (back)
-            //    AnimatePage(page7);
+            yield return null;
 
             if (back)
             {
@@ -1817,12 +1759,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 13)
         {
-            //DisableCharacters(page7);
-            //EnableCharacters(page8);
-
-            //if (!back)
-            //    AnimatePage(page8);
-
             yield return null;
 
             if (!back)
@@ -1854,11 +1790,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 14)
         {
-            //DisableCharacters(page9);
-            //EnableCharacters(page8);
-
-            //if (back)
-            //    AnimatePage(page8);
+            yield return null;
 
             if (back)
             {
@@ -1889,12 +1821,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 15)
         {
-            //DisableCharacters(page8);
-            //EnableCharacters(page9);
-
-            //if (!back)
-            //    AnimatePage(page9);
-
             yield return null;
 
             if (!back)
@@ -1926,11 +1852,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 16)
         {
-            //DisableCharacters(page10);
-            //EnableCharacters(page9);
-
-            //if (back)
-            //    AnimatePage(page9);
+            yield return null;
 
             if (back)
             {
@@ -1962,12 +1884,6 @@ public class Test : MonoBehaviour
         /**/
         else if (count == 17)
         {
-            //DisableCharacters(page9);
-            //EnableCharacters(page10);
-
-            //if (!back)
-            //    AnimatePage(page10);
-
             if (PlayerPrefs.GetInt("minigames") != 1)
                 yield return null;
 
@@ -2000,11 +1916,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 18)
         {
-            //DisableCharacters(page11);
-            //EnableCharacters(page10);
-
-            //if (back)
-            //    AnimatePage(page10);
+            yield return null;
 
             if (back)
             {
@@ -2035,12 +1947,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 19)
         {
-            //DisableCharacters(page10);
-            //EnableCharacters(page11);
-
-            //if (!back)
-            //    AnimatePage(page11);
-
             yield return null;
 
             if (!back)
@@ -2072,11 +1978,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 20)
         {
-            //DisableCharacters(page12);
-            //EnableCharacters(page11);
-
-            //if (back)
-            //    AnimatePage(page11);
+            yield return null;
 
             if (back)
             {
@@ -2107,12 +2009,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 21)
         {
-            //DisableCharacters(page11);
-            //EnableCharacters(page12);
-
-            //if (!back)
-            //    AnimatePage(page12);
-
             yield return null;
 
             if (!back)
@@ -2144,11 +2040,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 22)
         {
-            //DisableCharacters(page13);
-            //EnableCharacters(page12);
-
-            //if (back)
-            //    AnimatePage(page12);
+            yield return null;
 
             if (back)
             {
@@ -2179,12 +2071,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 23)
         {
-            //DisableCharacters(page12);
-            //EnableCharacters(page13);
-
-            //if (!back)
-            //    AnimatePage(page13);
-
             yield return null;
 
             if (!back)
@@ -2216,11 +2102,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 24)
         {
-            //DisableCharacters(page14);
-            //EnableCharacters(page13);
-
-            //if (back)
-            //    AnimatePage(page13);
+            yield return null;
 
             if (back)
             {
@@ -2251,12 +2133,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 25)
         {
-            //DisableCharacters(page13);
-            //EnableCharacters(page14);
-
-            //if (!back)
-            //    AnimatePage(page14);
-
             yield return null;
 
             if (!back)
@@ -2288,11 +2164,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 26)
         {
-            //DisableCharacters(page15);
-            //EnableCharacters(page14);
-
-            //if (back)
-            //    AnimatePage(page14);
+            yield return null;
 
             if (back)
             {
@@ -2324,12 +2196,6 @@ public class Test : MonoBehaviour
         /**/
         else if (count == 27)
         {
-            //DisableCharacters(page14);
-            //EnableCharacters(page15);
-
-            //if (!back)
-            //    AnimatePage(page15);
-
             if (PlayerPrefs.GetInt("minigames") != 1)
                 yield return null;
 
@@ -2362,11 +2228,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 28)
         {
-            //DisableCharacters(page16);
-            //EnableCharacters(page15);
-
-            //if (back)
-            //    AnimatePage(page15);
+            yield return null;
 
             if (back)
             {
@@ -2397,12 +2259,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 29)
         {
-            //DisableCharacters(page15);
-            //EnableCharacters(page16);
-
-            //if (!back)
-            //    AnimatePage(page16);
-
             yield return null;
 
             if (!back)
@@ -2434,11 +2290,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 30)
         {
-            //DisableCharacters(page17);
-            //EnableCharacters(page16);
-
-            //if (back)
-            //    AnimatePage(page16);
+            yield return null;
 
             if (back)
             {
@@ -2469,12 +2321,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 31)
         {
-            //DisableCharacters(page16);
-            //EnableCharacters(page17);
-
-            //if (!back)
-            //    AnimatePage(page17);
-
             yield return null;
 
             if (!back)
@@ -2506,11 +2352,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 32)
         {
-            //DisableCharacters(page18);
-            //EnableCharacters(page17);
-
-            //if (back)
-            //    AnimatePage(page17);
+            yield return null;
 
             if (back)
             {
@@ -2541,12 +2383,6 @@ public class Test : MonoBehaviour
         }
         else if (count == 33)
         {
-            //DisableCharacters(page17);
-            //EnableCharacters(page18);
-
-            //if (!back)
-            //    AnimatePage(page18);
-
             yield return null;
 
             if (!back)
@@ -2578,7 +2414,7 @@ public class Test : MonoBehaviour
         }
         else if (count == 34)
         {
-            //EnableCharacters(page18);
+            yield return null;
 
             if (back)
             {
