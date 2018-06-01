@@ -31,7 +31,7 @@ public class RedeemCode : MonoBehaviour {
         redeemErrorMessage.SetActive(false);
 
         //PlayerPrefs.SetString("verificationCode", ""); //for testing
-        if (PlayerPrefs.GetString("verificationCode") == productCode)
+        if (PlayerPrefs.GetString("verificationCode").Contains(SimplifyCode(productCode)))
             Verified();
 	}
 	
